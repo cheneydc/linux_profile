@@ -13,11 +13,11 @@ BUNDLE_DIR="${HOME}/.vim/bundle"
 VIMRC="${HOME}/.vimrc"
 
 echo "Install vim..."
-sudo apt-get -y install vim
+sudo pacman -S vim
 echo 
 
 echo "Install ctags..."
-sudo apt-get -y install ctags
+sudo pacman -S ctags
 echo
 
 echo "Create vim dir..."
@@ -46,9 +46,9 @@ echo
 
 echo "Install YouCompleteMe..."
 git clone $YCM_URL ${BUNDLE_DIR}/YouCompleteMe
-sudo apt-get -y install cmake 
-sudo apt-get -y install build-essential
-sudo apt-get -y install python-dev
+sudo pacman -S cmake
+sudo pacman -S build-essential
+sudo pacman -S python-dev
 cd ${BUNDLE_DIR}/YouCompleteMe && git submodule update --init --recursive && sudo ./install.py
 cd -
 echo
